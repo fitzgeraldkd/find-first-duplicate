@@ -1,5 +1,10 @@
 def find_first_duplicate(arr)
-  # type your code in here
+  values = {}
+  arr.each do |element|
+    return element if values[element]
+    values[element] = true
+  end
+  -1
 end
 
 if __FILE__ == $PROGRAM_NAME
